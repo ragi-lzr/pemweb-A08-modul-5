@@ -1,0 +1,290 @@
+
+.war-room {
+  display: grid;
+  gap: 22px;
+}
+
+.war-room-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.war-room-eyebrow {
+  margin: 0 0 6px;
+  color: #77798b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.war-room-heading h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.war-room-description {
+  margin: 8px 0 0;
+  color: #77798b;
+}
+
+.application-count {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e9eaf2;
+  color: #4a4c5e;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.conflict-banner {
+  padding: 16px 18px;
+  border: 1px solid #f2c2a8;
+  border-radius: 14px;
+  background: #fff4ed;
+  color: #8d3e1b;
+}
+
+.conflict-banner p {
+  margin: 8px 0 0;
+  line-height: 1.5;
+}
+
+.pipeline-filters {
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) minmax(140px, 1fr) auto minmax(170px, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.pipeline-filters input[type="search"],
+.pipeline-filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  color: #292b3b;
+}
+
+.ghosting-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #55576a;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.application-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e6e7ef;
+  border-radius: 18px;
+  background: white;
+}
+
+.application-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.status-badge,
+.ghosting-badge {
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-wishlist {
+  background: #ececf5;
+  color: #55576a;
+}
+
+.status-applied {
+  background: #e8f0ff;
+  color: #2859a8;
+}
+
+.status-screening {
+  background: #e8f6f1;
+  color: #24765b;
+}
+
+.status-interview {
+  background: #f1eaff;
+  color: #6d42a6;
+}
+
+.status-offer {
+  background: #e4f5e8;
+  color: #23733d;
+}
+
+.status-rejected {
+  background: #fce9e9;
+  color: #a43c3c;
+}
+
+.status-ghosted {
+  background: #eeeeef;
+  color: #6c6c74;
+}
+
+.ghosting-badge {
+  background: #fff0d7;
+  color: #925a13;
+}
+
+.application-title-button {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.application-title-button h3 {
+  margin: 0;
+  color: #292b3b;
+  font-size: 20px;
+}
+
+.application-title-button p {
+  margin: 6px 0 0;
+  color: #77798b;
+}
+
+.application-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  color: #77798b;
+  font-size: 12px;
+}
+
+.match-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  color: #55576a;
+  font-size: 13px;
+}
+
+.match-row strong {
+  color: #292b3b;
+}
+
+.match-track {
+  height: 7px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ececf2;
+}
+
+.match-fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 180ms ease;
+}
+
+.match-high {
+  background: #3c9b68;
+}
+
+.match-medium {
+  background: #d5a23d;
+}
+
+.match-low {
+  background: #d65c5c;
+}
+
+.application-detail-line {
+  margin: 12px 0 0;
+  color: #66687a;
+  font-size: 13px;
+}
+
+.application-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.application-actions button {
+  padding: 9px 12px;
+  border: 1px solid #dedfea;
+  border-radius: 9px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.application-actions .secondary-action {
+  color: #4c4e65;
+}
+
+.application-actions .delete-action {
+  margin-left: auto;
+  border-color: #f0d0d0;
+  color: #a43c3c;
+}
+
+.pipeline-empty {
+  padding: 40px 20px;
+  border: 1px dashed #d9dae5;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+}
+
+.pipeline-empty h3 {
+  margin: 0;
+}
+
+.pipeline-empty p {
+  margin: 10px 0 0;
+  color: #77798b;
+}
+
+@media (max-width: 800px) {
+  .pipeline-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .war-room-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pipeline-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .ghosting-filter {
+    padding: 4px 0;
+  }
+}
