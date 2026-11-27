@@ -1,0 +1,379 @@
+﻿/* ===== Detail Modal ===== */
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+  background: rgb(20 21 32 / 48%);
+  overflow-y: auto;
+}
+
+.detail-modal {
+  width: min(880px, 100%);
+  padding: 24px;
+  border-radius: 22px;
+  background: #f5f6fa;
+  box-shadow: 0 24px 70px rgb(20 21 32 / 30%);
+}
+
+.detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+}
+
+.detail-eyebrow {
+  margin: 0 0 6px;
+  color: #77798b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.detail-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.detail-role {
+  margin: 6px 0 0;
+  color: #77798b;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+  color: #55576a;
+  font-size: 13px;
+}
+
+.detail-close {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e6e7ef;
+  border-radius: 9px;
+  background: white;
+  color: #55576a;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.stepper-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e6e7ef;
+  border-radius: 12px;
+  background: white;
+  color: #a0a1b0;
+}
+
+.stepper-dot {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ececf2;
+  color: #77798b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.stepper-step.reached {
+  border-color: #c8e2d6;
+  color: #24765b;
+}
+
+.stepper-step.reached .stepper-dot {
+  background: #e4f5e8;
+  color: #23733d;
+}
+
+.stepper-step.current {
+  border-color: #292b3b;
+  box-shadow: 0 0 0 1px #292b3b;
+  color: #292b3b;
+}
+
+.stepper-step.current .stepper-dot {
+  background: #292b3b;
+  color: white;
+}
+
+.stepper-label {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.detail-sections {
+  display: grid;
+  gap: 14px;
+}
+
+.detail-card {
+  padding: 18px;
+  border-radius: 16px;
+  background: white;
+}
+
+.detail-card h3 {
+  margin: 0 0 14px;
+  font-size: 17px;
+}
+
+.status-transition-row label {
+  display: grid;
+  gap: 8px;
+  color: #55576a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.detail-card select,
+.detail-card input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  color: #292b3b;
+  font: inherit;
+}
+
+.conditional-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.conditional-fields label {
+  display: grid;
+  gap: 7px;
+  color: #55576a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-transition-actions {
+  margin-top: 14px;
+}
+
+.status-transition-actions button {
+  padding: 9px 14px;
+  border: 1px solid #292b3b;
+  border-radius: 10px;
+  background: #292b3b;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.status-transition-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-transition-final {
+  color: #77798b;
+  font-size: 14px;
+}
+
+.detail-error {
+  margin: 12px 0 0;
+  color: #a43c3c;
+  font-size: 13px;
+}
+
+.checklist-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #55576a;
+  font-size: 13px;
+}
+
+.progress-track {
+  height: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ececf2;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #3c9b68;
+  transition: width 180ms ease;
+}
+
+.checklist-form,
+.activity-log-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.checklist-form input,
+.activity-log-form input {
+  flex: 1;
+}
+
+.checklist-form button,
+.activity-log-form button {
+  padding: 9px 13px;
+  border: 1px solid #292b3b;
+  border-radius: 10px;
+  background: #292b3b;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.checklist-items {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checklist-item label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+}
+
+.checklist-item.done span {
+  color: #a0a1b0;
+  text-decoration: line-through;
+}
+
+.checklist-item button {
+  padding: 5px 8px;
+  border: 1px solid #f0d0d0;
+  border-radius: 7px;
+  background: white;
+  color: #a43c3c;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.activity-log-items {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.activity-log-items li {
+  padding: 10px 12px;
+  border: 1px solid #ececf2;
+  border-radius: 10px;
+  background: #fafbfd;
+}
+
+.activity-log-items time {
+  display: block;
+  color: #a0a1b0;
+  font-size: 11px;
+}
+
+.activity-log-items p {
+  margin: 4px 0 0;
+  color: #292b3b;
+  font-size: 13px;
+}
+
+.interview-prep {
+  text-align: center;
+}
+
+.interview-prep-heading {
+  display: flex;
+  justify-content: space-between;
+  color: #55576a;
+  font-size: 13px;
+}
+
+.interview-timer {
+  margin-top: 18px;
+  color: #292b3b;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.interview-question {
+  margin: 12px auto 0;
+  max-width: 520px;
+  color: #55576a;
+  line-height: 1.6;
+}
+
+.interview-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.interview-actions button {
+  padding: 9px 14px;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.interview-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .detail-overlay {
+    padding: 20px 12px;
+  }
+
+  .detail-modal {
+    padding: 14px;
+  }
+
+  .conditional-fields {
+    grid-template-columns: 1fr;
+  }
+}

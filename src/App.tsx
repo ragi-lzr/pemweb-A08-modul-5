@@ -1,10 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import type { Application } from './types/index.js';
 import { useApplications } from './hooks/useApplications.js';
 import WarRoom from './components/pipeline/WarRoom.js';
 import QuickAddApplication from './components/pipeline/QuickAddApplication.js';
 import ConflictBanner from './components/pipeline/ConflictBanner.js';
 import UndoToast from './components/toast/UndoToast.js';
+import StatsCards from './components/dashboard/StatsCards.js';
+import OfferComparator from './components/dashboard/OfferComparator.js';
+import ApplicationDetail from './components/detail/ApplicationDetail.js';
 import { useLocalStorage } from './hooks/useLocalStorage.js';
 
 type Tab = 'explore' | 'pipeline' | 'offers';
@@ -104,7 +107,8 @@ export default function App() {
         </div>
       </header>
 
-      {/* Konflik dihitung dari semua lamaran, tidak terpengaruh tab atau filter. */}
+      {/* Statistik dan banner bentrok tampil di atas semua tab. */}
+      <StatsCards applications={applications} />
       <ConflictBanner applications={applications} />
 
       <nav className="tab-navigation" aria-label="Navigasi utama">
@@ -156,22 +160,20 @@ export default function App() {
         )}
 
         {activeTab === 'offers' && (
-          <div className="placeholder">
-            <h2>Bandingkan Offer</h2>
-            {offerCount < 2 ? (
-              <p>Butuh minimal 2 lamaran berstatus OFFER untuk mulai membandingkan.</p>
-            ) : (
-              <p>Offer Comparator dari Orang C akan dipasang di sini.</p>
-            )}
-          </div>
+          <OfferComparator
+            applications={applications}
+            kaptenSkills={kaptenSkills}
+          />
         )}
       </section>
 
       {selectedApplication && (
-        <div className="selection-notice" role="status">
-          <span>Detail <b>{selectedApplication.company}</b> menunggu integrasi modal Orang C.</span>
-          <button type="button" onClick={() => setSelectedId(null)}>Tutup</button>
-        </div>
+        <ApplicationDetail
+          application={selectedApplication}
+          kaptenSkills={kaptenSkills}
+          onUpdateApplication={updateApplication}
+          onClose={() => setSelectedId(null)}
+        />
       )}
 
       {pendingUndo && (

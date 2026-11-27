@@ -21,11 +21,11 @@ export function calcOfferScore(
 ): OfferScoreResult {
   const salary =
     maxSalary > 0
-      ? Math.round((Math.min(app.salaryOffer ?? 0, maxSalary) / maxSalary) * 50)
+      ? (Math.min(app.salaryOffer ?? 0, maxSalary) / maxSalary) * 50
       : 0;
 
-  const mode = Math.round(WORK_MODE_SCORE[app.workMode] * 0.25);
-  const skill = Math.round(matchScore * 0.25);
+  const mode = WORK_MODE_SCORE[app.workMode] * 0.25;
+  const skill = matchScore * 0.25;
 
   return {
     salary,

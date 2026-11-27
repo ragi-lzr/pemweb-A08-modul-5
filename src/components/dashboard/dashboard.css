@@ -1,0 +1,183 @@
+﻿/* ===== Stats Cards ===== */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stats-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e6e7ef;
+  border-radius: 16px;
+  background: white;
+}
+
+.stats-card-label {
+  display: block;
+  color: #77798b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stats-card-value {
+  display: block;
+  margin-top: 8px;
+  color: #292b3b;
+  font-size: 26px;
+}
+
+.stats-card-sub {
+  display: block;
+  margin-top: 4px;
+  color: #77798b;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ===== Offer Comparator ===== */
+.offer-comparator {
+  padding: 22px;
+  border: 1px solid #e6e7ef;
+  border-radius: 20px;
+  background: white;
+}
+
+.offer-heading h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.offer-eyebrow {
+  margin: 0 0 6px;
+  color: #77798b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.offer-selectors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.offer-selectors label {
+  display: grid;
+  gap: 7px;
+  color: #55576a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.offer-selectors select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  color: #292b3b;
+  font: inherit;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.offer-column {
+  padding: 16px;
+  border: 1px solid #ececf2;
+  border-radius: 16px;
+}
+
+.offer-column h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.offer-badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e4f5e8;
+  color: #23733d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.offer-table {
+  width: 100%;
+  margin-top: 14px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.offer-table th,
+.offer-table td {
+  padding: 9px 6px;
+  border-top: 1px solid #ececf2;
+  text-align: left;
+  vertical-align: top;
+}
+
+.offer-table th {
+  color: #77798b;
+  font-weight: 500;
+}
+
+.offer-table td {
+  color: #292b3b;
+}
+
+.offer-total-row th,
+.offer-total-row td {
+  border-top: 1px solid #d9dae5;
+  font-weight: 700;
+}
+
+.offer-tie {
+  margin-top: 16px;
+  text-align: center;
+  color: #77798b;
+  font-weight: 600;
+}
+
+.offer-empty {
+  padding: 36px;
+  border: 1px dashed #d9dae5;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+}
+
+.offer-empty h2 {
+  margin: 0;
+}
+
+.offer-empty p {
+  margin: 10px 0 0;
+  color: #77798b;
+}
+
+@media (max-width: 760px) {
+  .stats-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .offer-grid,
+  .offer-selectors {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+}
