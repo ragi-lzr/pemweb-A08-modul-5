@@ -28,7 +28,7 @@ function getStatusLabel(status: ApplicationStatus): string {
 
 export default function ApplicationDetail({
   application,
-  _kaptenSkills,
+  kaptenSkills: _kaptenSkills,
   onUpdateApplication,
   onClose,
 }: ApplicationDetailProps) {
