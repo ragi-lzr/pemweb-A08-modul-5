@@ -1,36 +1,35 @@
-﻿export interface SkillMatchResult {
+export interface SkillMatchResult {
   score: number;
   matched: string[];
   missing: string[];
 }
 
-export function calcSkillMatch(
-  kaptenSkills: string[],
-  required: string[]
-): SkillMatchResult {
-  if (required.length === 0) {
-    return { score: 0, matched: [], missing: [] };
-  }
+const normalize = (skill: string) => skill.trim().toLowerCase();
 
-  const userSkills = new Set(
-    kaptenSkills.map((skill) => skill.trim().toLowerCase()).filter(Boolean)
-  );
+/**
+ * Hitung Match % = Math.round(cocok / total * 100), case-insensitive.
+ * Contoh: [React, TypeScript, CSS] vs [React, TypeScript, CSS, Docker] → 75, missing ['Docker'].
+ */
+export function calcSkillMatch(kaptenSkills: string[], required: string[]): SkillMatchResult {
+  const requiredClean = required.map((skill) => skill.trim()).filter(Boolean);
+  if (requiredClean.length === 0) return { score: 0, matched: [], missing: [] };
 
-  const matched: string[] = [];
-  const missing: string[] = [];
+  const owned = new Set(kaptenSkills.map(normalize));
+  const matched = requiredClean.filter((skill) => owned.has(normalize(skill)));
+  const missing = requiredClean.filter((skill) => !owned.has(normalize(skill)));
 
-  for (const skill of required) {
-    const normalized = skill.trim();
-    const key = normalized.toLowerCase();
+  return {
+    score: Math.round((matched.length / requiredClean.length) * 100),
+    matched,
+    missing,
+  };
+}
 
-    if (userSkills.has(key)) {
-      matched.push(skill);
-    } else {
-      missing.push(skill);
-    }
-  }
+export type MatchLevel = 'high' | 'medium' | 'low';
 
-  const score = Math.round((matched.length / required.length) * 100);
-
-  return { score, matched, missing };
+/** Warna badge: ≥70 hijau (high), 40–69 kuning (medium), <40 merah (low). */
+export function matchLevel(score: number): MatchLevel {
+  if (score >= 70) return 'high';
+  if (score >= 40) return 'medium';
+  return 'low';
 }
