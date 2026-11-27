@@ -1,0 +1,19 @@
+.add-application-form .field-error {
+  color: #a43c3c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.add-application-form input[aria-invalid='true'] {
+  border-color: #d98b8b;
+  background: #fdf7f7;
+}
+
+.add-application-form .form-success {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #e3f6ea;
+  color: #1f7a45;
+  font-size: 13px;
+}

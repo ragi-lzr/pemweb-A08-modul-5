@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import type { Application } from './types/index.js';
 import { useApplications } from './hooks/useApplications.js';
 import WarRoom from './components/pipeline/WarRoom.js';
-import QuickAddApplication from './components/pipeline/QuickAddApplication.js';
+import AddApplicationForm from './components/form/AddApplicationForm.js';
+import SkillProfile from './components/explore/SkillProfile.js';
+import JobExplorer from './components/explore/JobExplorer.js';
 import ConflictBanner from './components/pipeline/ConflictBanner.js';
 import UndoToast from './components/toast/UndoToast.js';
 import { useLocalStorage } from './hooks/useLocalStorage.js';
@@ -28,6 +30,7 @@ export default function App() {
     updateApplication,
     removeApplication,
     restoreApplication,
+    hasApplied,
   } = useApplications();
 
   const defaultSkills = ['React', 'TypeScript', 'CSS'];
@@ -130,18 +133,22 @@ export default function App() {
       </div>
 
       {isAddFormOpen && (
-        <QuickAddApplication
+        <AddApplicationForm
           onAdd={addApplication}
+          hasApplied={hasApplied}
           onClose={() => setIsAddFormOpen(false)}
         />
       )}
 
       <section className="page-content">
         {activeTab === 'explore' && (
-          <div className="placeholder">
-            <h2>Eksplorasi Lowongan</h2>
-            <p>Integrasi katalog lowongan dari Orang A akan dipasang di sini.</p>
-            <p>Untuk sekarang, gunakan <b>Catat Lamaran</b> untuk memasukkan lowongan secara manual.</p>
+          <div className="explore-layout">
+            <SkillProfile kaptenSkills={kaptenSkills} setKaptenSkills={setKaptenSkills} />
+            <JobExplorer
+              kaptenSkills={kaptenSkills}
+              addApplication={addApplication}
+              hasApplied={hasApplied}
+            />
           </div>
         )}
 
