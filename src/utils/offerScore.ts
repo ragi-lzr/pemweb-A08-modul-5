@@ -14,6 +14,21 @@ export interface OfferScoreResult {
   total: number;
 }
 
+function getWorkModeScore(workMode: string): number {
+  const normalized = workMode.trim().toLowerCase();
+
+  switch (normalized) {
+    case 'remote':
+      return 100;
+    case 'hybrid':
+      return 75;
+    case 'onsite':
+      return 50;
+    default:
+      return 50;
+  }
+}
+
 export function calcOfferScore(
   app: Application,
   maxSalary: number,
@@ -24,7 +39,7 @@ export function calcOfferScore(
       ? (Math.min(app.salaryOffer ?? 0, maxSalary) / maxSalary) * 50
       : 0;
 
-  const mode = WORK_MODE_SCORE[app.workMode] * 0.25;
+  const mode = getWorkModeScore(app.workMode) * 0.25;
   const skill = matchScore * 0.25;
 
   return {
