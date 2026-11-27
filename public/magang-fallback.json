@@ -1,0 +1,113 @@
+{
+  "jobs": [
+    {
+      "id": 900001,
+      "title": "Frontend Developer Intern",
+      "company_name": "Nusantara Digital",
+      "category": "Software Development",
+      "candidate_required_location": "Remote (Indonesia)",
+      "salary": "Rp 3.000.000 / bulan",
+      "tags": ["React", "TypeScript", "CSS"],
+      "url": "https://example.com/jobs/900001"
+    },
+    {
+      "id": 900002,
+      "title": "Backend Engineer Intern",
+      "company_name": "Kopi Cloud",
+      "category": "Software Development",
+      "candidate_required_location": "Hybrid - Jakarta",
+      "salary": "Rp 3.500.000 / bulan",
+      "tags": ["Node.js", "PostgreSQL", "Docker", "TypeScript"]
+    },
+    {
+      "id": 900003,
+      "title": "Fullstack Developer Intern",
+      "company_name": "Sawah Tech",
+      "category": "Software Development",
+      "candidate_required_location": "Onsite - Yogyakarta",
+      "salary": "Rp 2.500.000 / bulan",
+      "tags": ["React", "Node.js", "Docker", "Git"]
+    },
+    {
+      "id": 900004,
+      "title": "UI/UX Designer Intern",
+      "company_name": "Batik Studio",
+      "category": "Design",
+      "candidate_required_location": "Remote",
+      "salary": "Rp 2.000.000 / bulan",
+      "tags": ["Figma", "CSS", "User Research"]
+    },
+    {
+      "id": 900005,
+      "title": "Data Analyst Intern",
+      "company_name": "Gudang Data",
+      "category": "Data",
+      "candidate_required_location": "Hybrid - Bandung",
+      "salary": "Rp 3.000.000 / bulan",
+      "tags": ["Python", "SQL", "Tableau"]
+    },
+    {
+      "id": 900006,
+      "title": "DevOps Engineer Intern",
+      "company_name": "Awan Biru",
+      "category": "DevOps",
+      "candidate_required_location": "Remote (Asia)",
+      "salary": "Rp 4.000.000 / bulan",
+      "tags": ["Docker", "Kubernetes", "Linux", "CI/CD"]
+    },
+    {
+      "id": 900007,
+      "title": "QA Engineer Intern",
+      "company_name": "Teliti Labs",
+      "category": "QA",
+      "candidate_required_location": "Onsite - Surabaya",
+      "salary": "Rp 2.200.000 / bulan",
+      "tags": ["Testing", "Playwright", "TypeScript"]
+    },
+    {
+      "id": 900008,
+      "title": "Mobile Developer Intern",
+      "company_name": "Ojek Kode",
+      "category": "Software Development",
+      "candidate_required_location": "Hybrid - Jakarta",
+      "salary": "Rp 3.200.000 / bulan",
+      "tags": ["React Native", "TypeScript", "Redux"]
+    },
+    {
+      "id": 900009,
+      "title": "Machine Learning Intern",
+      "company_name": "Rempah AI",
+      "category": "Data",
+      "candidate_required_location": "Remote",
+      "salary": "Rp 4.500.000 / bulan",
+      "tags": ["Python", "TensorFlow", "Docker"]
+    },
+    {
+      "id": 900010,
+      "title": "Web Developer Intern",
+      "company_name": "Warung Web",
+      "category": "Software Development",
+      "candidate_required_location": "Onsite - Malang",
+      "salary": "Rp 1.800.000 / bulan",
+      "tags": ["HTML", "CSS", "JavaScript", "React"]
+    },
+    {
+      "id": 900011,
+      "title": "Product Designer Intern",
+      "company_name": "Layang Kreatif",
+      "category": "Design",
+      "candidate_required_location": "Hybrid - Bali",
+      "salary": "",
+      "tags": ["Figma", "Prototyping"]
+    },
+    {
+      "id": 900012,
+      "title": "Site Reliability Intern",
+      "company_name": "Jembatan Infra",
+      "category": "DevOps",
+      "candidate_required_location": "Remote",
+      "salary": "Rp 3.800.000 / bulan",
+      "tags": ["Linux", "Docker", "Go", "Monitoring"]
+    }
+  ]
+}

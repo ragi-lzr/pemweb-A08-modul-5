@@ -1,0 +1,334 @@
+.explore-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.explore-panel {
+  padding: 22px;
+  border: 1px solid #e6e7ef;
+  border-radius: 18px;
+  background: white;
+}
+
+.explore-panel-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.explore-panel-heading p {
+  margin: 6px 0 0;
+  color: #77798b;
+  font-size: 14px;
+}
+
+.explore-heading-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+kbd {
+  padding: 1px 6px;
+  border: 1px solid #dedfea;
+  border-radius: 5px;
+  background: #f5f6fa;
+  font-size: 12px;
+}
+
+/* ---------- Profil skill ---------- */
+.skill-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 6px 12px;
+  border-radius: 999px;
+  background: #eef0fb;
+  color: #292b3b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.skill-chip button {
+  width: 22px;
+  height: 22px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #77798b;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.skill-chip button:hover {
+  background: #dfe2f5;
+  color: #a43c3c;
+}
+
+.skill-empty {
+  color: #77798b;
+  font-size: 14px;
+}
+
+.skill-add-form,
+.explore-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.skill-add-form input,
+.explore-filters input,
+.explore-filters select {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  color: #292b3b;
+  font: inherit;
+}
+
+.explore-filters select {
+  flex: 0 0 220px;
+}
+
+.explore-error-text {
+  margin: 10px 0 0;
+  color: #a43c3c;
+  font-size: 13px;
+}
+
+/* ---------- Toggle sumber ---------- */
+.source-toggle {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 12px;
+  background: #f0f1f6;
+}
+
+.source-toggle button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #55576a;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.source-toggle button.active {
+  background: white;
+  color: #292b3b;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.08);
+}
+
+/* ---------- State Loading / Error / Kosong ---------- */
+.explore-hint {
+  margin: 10px 0 16px;
+  color: #77798b;
+  font-size: 13px;
+}
+
+.explore-state {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 36px 20px;
+  border: 1px dashed #dedfea;
+  border-radius: 14px;
+  color: #55576a;
+  text-align: center;
+}
+
+.explore-state p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.explore-state-error {
+  border-color: #f0c4c4;
+  background: #fdf5f5;
+  color: #a43c3c;
+}
+
+.explore-state-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.secondary-button {
+  padding: 11px 16px;
+  border: 1px solid #dedfea;
+  border-radius: 10px;
+  background: white;
+  color: #292b3b;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.explore-spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #e6e7ef;
+  border-top-color: #292b3b;
+  border-radius: 50%;
+  animation: explore-spin 0.8s linear infinite;
+}
+
+@keyframes explore-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Kartu lowongan ---------- */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.job-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #e6e7ef;
+  border-radius: 14px;
+  background: #fcfcfe;
+}
+
+.job-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.job-company {
+  margin: 4px 0 0;
+  color: #55576a;
+  font-size: 14px;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+
+.job-meta span {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #f0f1f6;
+  color: #55576a;
+  font-size: 12px;
+}
+
+.match-badge {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.match-badge-high {
+  background: #e3f6ea;
+  color: #1f7a45;
+}
+
+.match-badge-medium {
+  background: #fdf3d8;
+  color: #8a6510;
+}
+
+.match-badge-low {
+  background: #fbe5e5;
+  color: #a43c3c;
+}
+
+.job-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.job-skill {
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.job-skill.matched {
+  background: #e3f6ea;
+  color: #1f7a45;
+}
+
+.job-skill.missing {
+  background: #f3f3f6;
+  color: #9a9cab;
+  text-decoration: line-through;
+}
+
+.job-skill.none {
+  color: #9a9cab;
+  font-weight: 400;
+}
+
+.job-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-card-actions a {
+  color: #55576a;
+  font-size: 13px;
+}
+
+.job-card-actions .primary-action {
+  margin-left: auto;
+}
+
+.job-card-actions .primary-action:disabled {
+  border-color: #dedfea;
+  background: #eef0f4;
+  color: #77798b;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .explore-filters,
+  .skill-add-form {
+    flex-direction: column;
+  }
+
+  .explore-filters select {
+    flex-basis: auto;
+  }
+}
